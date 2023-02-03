@@ -1,4 +1,27 @@
+.navigation {
+    nav {
+        ol {
+            li {
+                a {
+                    
+                    span {
+                        @apply mr-2 text-sky-600;
+                    }
+                    &:hover {
+                        @apply text-sky-600;
+                    }
+                    @apply py-3 px-5 font-mono text-xs transition ease-in-out;
+                }
+               
+            }
+        }
+    }
+}
+
 .section {
-    color: red;
-    @apply my-7
+    &__herobanner {
+        &_content {
+            transform: translateY(-50%);
+        }
+    }
 }
