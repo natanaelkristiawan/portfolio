@@ -30,25 +30,25 @@ export default function Home() {
 
       <section id='section__herobanner' className='container mx-auto relative h-screen'>
         <div className={`absolute top-1/2 ${HomeStyle.section__herobanner_content}`}>
-          <h3 className='text-base text-sky-600'>Hi, my name is</h3>
+          <h3 className='text-base text-sky-600 font-mono'>Hi, my name is</h3>
           <div className='text-7xl font-bold my-5 '>
             <h1 className='my-2 text-stone-800'>Natanael Kristiawan.</h1>
             <h2 className='my-2 text-stone-500'>I build things for the web.</h2>
           </div>
-          <p className='w-1/2 text-stone-500'>I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at <a href='https://maxsol.id' className='text-sky-600 hover:text-sky-900'>Maxsol.ID.</a></p>
+          <p className='w-1/2 text-stone-500'>I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at <a href='https://maxsol.id'>Maxsol.ID.</a></p>
         </div>
       </section>
 
 
-      <section id='section_aboutus' className='container mx-auto'>
-        <div>
+      <section id='section_aboutus' className={`${HomeStyle.container__laptop} mx-auto`}>
+        <div className={HomeStyle.section__aboutus_content}>
             <div>
-                <div className='title'>
-                  <span>01</span>
+                <div className={HomeStyle.section__aboutus_title}>
+                  <span>01.</span>
                   <h2>About Me</h2>
                 </div>
 
-                <div className='description'>
+                <div className={HomeStyle.section__aboutus_description}>
                   <p>Hello! My name is Natan and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!</p>
                   <p>Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.</p>
                   <p>I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.</p>
@@ -67,8 +67,10 @@ export default function Home() {
                   </ul>
                 </div>
             </div>
-            <div>
-              <Image width={300} src={ProfilePic} alt="natanaelkristiawan"></Image>
+            <div >
+              <div className={HomeStyle.section__aboutus_image}>
+                <Image width={400} src={ProfilePic} alt="natanaelkristiawan"></Image>
+              </div>
             </div>
         </div>
       </section>
