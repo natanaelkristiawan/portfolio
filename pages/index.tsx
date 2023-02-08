@@ -4,7 +4,13 @@ import Image from 'next/image'
 import ProfilePic from '@/public/head.png'
 
 import logo from '@/public/logo.png'
+import { useState } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+
 export default function Home() {
+  const [hovered, setHovered] = useState(false);
+
+  const toggleHover = () => setHovered(!hovered);
   return (
     <>
       
@@ -40,7 +46,7 @@ export default function Home() {
       </section>
 
 
-      <section id='section_aboutus' className={`${HomeStyle.container__laptop} mx-auto`}>
+      <section id='section_aboutus' className={`${HomeStyle.container__laptop} mx-auto my-28`}>
         <div className={HomeStyle.section__aboutus_content}>
             <div>
                 <div className={HomeStyle.section__aboutus_title}>
@@ -50,9 +56,9 @@ export default function Home() {
 
                 <div className={HomeStyle.section__aboutus_description}>
                   <p>Hello! My name is Natan and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!</p>
-                  <p>Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.</p>
+                  <p>Fast-forward to today, and I&apos;ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.</p>
                   <p>I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.</p>
-                  <p>Here are a few technologies I've been working with recently:</p>
+                  <p>Here are a few technologies I&apos;ve been working with recently:</p>
                   <ul>
                     <li>PHP</li>
                     <li>Wordpress</li>
@@ -74,6 +80,57 @@ export default function Home() {
             </div>
         </div>
       </section>
+
+
+
+      <section id='section_experience' className={`${HomeStyle.container__tablet} mx-auto my-28`}>
+          <div>
+            <div className={HomeStyle.section__aboutus_title}>
+              <span>02.</span>
+              <h2>Where I&apos;ve Worked</h2>
+            </div>
+            <Tabs>
+              <TabList>
+                <Tab>Maxsol.ID</Tab>
+                <Tab>Silicon Bali Creative</Tab>
+                <Tab>IGB Media</Tab>
+              </TabList>
+
+              <TabPanel>
+                <h2 className='font-semibold text-lg'>Backend Programmer <a className="text-sky-600" rel="noreferrer" target="_blank" href="https://maxsol.id">@Maxsol.ID</a></h2>
+                <p className='font-mono text-xs'>September 2015 - Present</p>
+                <ul>
+                  <li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+                  <li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, VueJS, React, WordPress, Laravel, and Mysql</li>
+                  <li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li>
+                </ul>
+              </TabPanel>
+              <TabPanel>
+                <h2 className='font-semibold text-lg'>Freelance Programmer <a className="text-sky-600" rel="noreferrer" target="_blank" href="https://siliconbalicreative.com">@SiliconBaliCreative</a></h2>
+                <p className='font-mono text-xs'>March 2022 - Present</p>
+                <ul>
+                  <li>Create a website with a modern look using wordpress and elementor</li>
+                  <li>Ensure the website runs normally and without problems</li>
+                </ul>
+              </TabPanel>
+              <TabPanel>
+                <h2 className='font-semibold text-lg'>Freelance Programmer <a className="text-sky-600" rel="noreferrer" target="_blank" href="https://igbmedia.com">@IGBMedia</a></h2>
+                <p className='font-mono text-xs'>January 2021 - Present</p>
+                <ul>
+                  <li>Create a website with a modern look using wordpress and elementor</li>
+                  <li>Ensure the website runs normally and without problems</li>
+                </ul>
+              </TabPanel>
+            </Tabs>
+          </div>
+          <div>
+
+          </div>
+      </section>
+
+
+      
+
 
     </>
   )

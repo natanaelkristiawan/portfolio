@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    p {
+        line-height: 1.8;
+        @apply text-stone-500 my-2;
+    }
+
+    p {
+
+        a {
+            position: relative;
+            display: inline-block;
+            &::after {
+                position: relative;
+                content: "";
+                width: 0;
+                transition: all .2s ease-in-out;
+                @apply border-t-2 block ;
+              }
+      
+            &:hover {
+    
+            &::after {
+                width: 100%;
+            }
+            }
+              
+
+            @apply text-sky-600 font-semibold;
+        }
+        
+    }
+}
