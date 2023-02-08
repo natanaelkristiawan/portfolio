@@ -55,9 +55,10 @@ export default function Home() {
                 </div>
 
                 <div className={HomeStyle.section__aboutus_description}>
-                  <p>Hello! My name is Natan and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!</p>
-                  <p>Fast-forward to today, and I&apos;ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.</p>
-                  <p>I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.</p>
+
+                  <p>Hello, My name Natanael Kristiawan. I&apos;m is a highly skilled programmer with over 13 years of experience. He started his career in the field in 2009 and has been dedicated to my craft ever since. With a solid education from University Udayana Bali, I has a strong foundation in computer science and programming principles.</p>
+                  <p>As a programmer, My main job is to ensure that software runs smoothly and with minimal bugs. I&apos;m uses my expertise in coding and problem-solving to tackle complex issues and deliver high-quality results. Whether it&apos;s finding and fixing bugs, optimizing software performance, or implementing new features, I&apos;m  committed to delivering the best possible outcome for my clients.</p>
+                  <p>With my extensive experience and passion for programming, I&apos;m a valuable asset to any software development team. Whether my working on a large-scale project or a small task, I&apos;m approaches each challenge with a positive attitude and a drive to succeed</p>
                   <p>Here are a few technologies I&apos;ve been working with recently:</p>
                   <ul>
                     <li>PHP</li>
@@ -130,7 +131,30 @@ export default function Home() {
 
 
       
+      <section id='section_project' className={`${HomeStyle.container__laptop} mx-auto my-28`}>
+        <div>
+          <div className={HomeStyle.section__aboutus_title}>
+            <span>03.</span>
+            <h2>Some Things I&apos;ve</h2>
+          </div>
 
+          <div>
+            <div className='flex gap-8'>
+              <div className='w-3/5'>
+                <Image src={require('../public/igbmedia.png')} alt="igbmedia" ></Image>
+              </div>
+              <div className='w-2/5'>
+                <div>
+                  <p>Featured Project</p>
+                  <h2></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
 
     </>
   )
