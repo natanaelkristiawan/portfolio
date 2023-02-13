@@ -71,6 +71,22 @@
             }
         }
 
+        &_animation {
+            &:hover {
+                .section__aboutus_image {
+                    img {
+                        filter: grayscale(0);
+                        transform: scale(1) rotate(5deg);
+                    }
+                    &::after, &::before {
+                        top: 0;
+                        left: 0;
+    
+                        @apply border-sky-400;
+                    }
+                }
+            }
+        }
 
         &_image {
 
@@ -87,7 +103,7 @@
                 height: 100%;
                 top: 20px;
                 left: 20px;
-
+                z-index: -1;
                 
                 @apply border-2 transition-all ease-in-out rounded;
             }
@@ -99,26 +115,43 @@
                 height: 100%;
                 top: -20px;
                 left: -20px;
+                z-index: -1;
                 @apply border-2 transition-all ease-in-out rounded;
             }
 
-            &:hover {
-                img {
-                    filter: grayscale(0);
-                    transform: scale(1) rotate(5deg);
-                }
-                &::after, &::before {
-                    top: 0;
-                    left: 0;
-
-                    @apply border-sky-400;
-                }
-            }
+            
             
             @apply p-5 inline-block relative rounded;
             
         } 
 
+    }
+
+
+    &__project {
+        &_wrapper{
+            &_description {
+                position: relative;
+            }
+
+           &-heading, &-description  {
+            text-align: right;
+           }
+
+           &-heading {
+            @apply mb-4
+           }
+
+           &-description {
+
+            width: 500px;
+            position: absolute;
+            right: 0;
+            @apply bg-stone-200 p-5;
+
+           }
+            
+        }
     }
 }
 

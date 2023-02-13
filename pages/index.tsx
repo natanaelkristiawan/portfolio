@@ -56,8 +56,8 @@ export default function Home() {
 
                 <div className={HomeStyle.section__aboutus_description}>
 
-                  <p>Hello, My name Natanael Kristiawan. I&apos;m is a highly skilled programmer with over 13 years of experience. He started his career in the field in 2009 and has been dedicated to my craft ever since. With a solid education from University Udayana Bali, I has a strong foundation in computer science and programming principles.</p>
-                  <p>As a programmer, My main job is to ensure that software runs smoothly and with minimal bugs. I&apos;m uses my expertise in coding and problem-solving to tackle complex issues and deliver high-quality results. Whether it&apos;s finding and fixing bugs, optimizing software performance, or implementing new features, I&apos;m  committed to delivering the best possible outcome for my clients.</p>
+                  <p>Hello, My name Natanael Kristiawan. I&apos;m is a highly skilled programmer with over 13 years of experience. I&apos;m started my career in the field in 2009 and has been dedicated to my craft ever since. With a solid education from University Udayana Bali, I has a strong foundation in computer science and programming principles.</p>
+                  <p>As a programmer, my main job is to ensure that software runs smoothly and with minimal bugs. I&apos;m uses my expertise in coding and problem-solving to tackle complex issues and deliver high-quality results. Whether it&apos;s finding and fixing bugs, optimizing software performance, or implementing new features, I&apos;m  committed to delivering the best possible outcome for my clients.</p>
                   <p>With my extensive experience and passion for programming, I&apos;m a valuable asset to any software development team. Whether my working on a large-scale project or a small task, I&apos;m approaches each challenge with a positive attitude and a drive to succeed</p>
                   <p>Here are a few technologies I&apos;ve been working with recently:</p>
                   <ul>
@@ -74,9 +74,11 @@ export default function Home() {
                   </ul>
                 </div>
             </div>
-            <div >
-              <div className={HomeStyle.section__aboutus_image}>
-                <Image width={400} src={ProfilePic} alt="natanaelkristiawan"></Image>
+            <div>
+              <div className={HomeStyle.section__aboutus_animation}>
+                <div className={HomeStyle.section__aboutus_image}>
+                  <Image width={400} src={ProfilePic} alt="natanaelkristiawan"></Image>
+                </div>
               </div>
             </div>
         </div>
@@ -132,22 +134,26 @@ export default function Home() {
 
       
       <section id='section_project' className={`${HomeStyle.container__laptop} mx-auto my-28`}>
-        <div>
+        <div className={HomeStyle.section__project}>
           <div className={HomeStyle.section__aboutus_title}>
             <span>03.</span>
             <h2>Some Things I&apos;ve</h2>
           </div>
 
-          <div>
+          <div className={HomeStyle.section__project_wrapper}>
             <div className='flex gap-8'>
               <div className='w-3/5'>
                 <Image src={require('../public/igbmedia.png')} alt="igbmedia" ></Image>
               </div>
-              <div className='w-2/5'>
-                <div>
+              <div className={`w-2/5 ${HomeStyle.section__project_wrapper_description}`}>
+                <div className={HomeStyle['section__project_wrapper-heading']}>
                   <p>Featured Project</p>
-                  <h2></h2>
+                  <h2>IGB Media</h2>
                 </div>
+                <div className={HomeStyle['section__project_wrapper-description']}>
+                  <p>IGBmedia.com is a professionally designed website built with WordPress and Elementor. The company profile showcases their expertise in digital media and offers creative solutions for businesses.</p>
+                </div>
+                
               </div>
             </div>
           </div>
